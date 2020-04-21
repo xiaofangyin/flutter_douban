@@ -75,34 +75,48 @@ class _MyHomePageState extends State<MyHomePage> {
         icon: Image.asset(
           "assets/images/icon_home_tab_1_normal.png",
           width: 30,
+          gaplessPlayback: true,
         ),
         activeIcon: Image.asset(
           "assets/images/icon_home_tab_1_selected.png",
           width: 30,
+          gaplessPlayback: true,
         )));
     items.add(BottomNavigationBarItem(
         title: Text("关注"),
-        icon:
-            Image.asset("assets/images/icon_home_tab_2_normal.png", width: 30),
+        icon: Image.asset(
+          "assets/images/icon_home_tab_2_normal.png",
+          width: 30,
+          gaplessPlayback: true,
+        ),
         activeIcon: Image.asset(
           "assets/images/icon_home_tab_2_selected.png",
           width: 30,
+          gaplessPlayback: true,
         )));
     items.add(BottomNavigationBarItem(
         title: Text("消息"),
-        icon:
-            Image.asset("assets/images/icon_home_tab_4_normal.png", width: 30),
+        icon: Image.asset(
+          "assets/images/icon_home_tab_4_normal.png",
+          width: 30,
+          gaplessPlayback: true,
+        ),
         activeIcon: Image.asset(
           "assets/images/icon_home_tab_4_selected.png",
           width: 30,
+          gaplessPlayback: true,
         )));
     items.add(BottomNavigationBarItem(
         title: Text("我的"),
-        icon:
-            Image.asset("assets/images/icon_home_tab_5_normal.png", width: 30),
+        icon: Image.asset(
+          "assets/images/icon_home_tab_5_normal.png",
+          width: 30,
+          gaplessPlayback: true,
+        ),
         activeIcon: Image.asset(
           "assets/images/icon_home_tab_5_selected.png",
           width: 30,
+          gaplessPlayback: true,
         )));
     return items;
   }
