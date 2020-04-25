@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterdouban/model/home_model.dart';
+import 'package:flutterdouban/pages/detail/movie_detail.dart';
 import 'package:flutterdouban/widget/start_rating.dart';
 
 class FYHomeMovieItem extends StatelessWidget {
@@ -16,22 +17,33 @@ class FYHomeMovieItem extends StatelessWidget {
       decoration: BoxDecoration(
           border:
               Border(bottom: BorderSide(width: 8, color: Color(0xffcccccc)))),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          buildHeader(),
-          SizedBox(
-            height: 6,
-          ),
-          buildContent(),
-          SizedBox(
-            height: 6,
-          ),
-          buildFooter(),
-          SizedBox(
-            height: 6,
-          )
-        ],
+      child: GestureDetector(
+        onTap: () {
+          Future future =
+              Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+            return MovieDetailActivity("首页数据");
+          }));
+          future.then((res) {
+            print(res);
+          });
+        },
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            buildHeader(),
+            SizedBox(
+              height: 6,
+            ),
+            buildContent(),
+            SizedBox(
+              height: 6,
+            ),
+            buildFooter(),
+            SizedBox(
+              height: 6,
+            )
+          ],
+        ),
       ),
     );
   }
